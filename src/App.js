@@ -1,7 +1,7 @@
 import "./App.scss";
 import { Route, Switch } from "react-router-dom";
 import Homepage from "./views/Homepage";
-import Navi from "./components/Navi";
+import Navi from "./Components/Navi";
 import Computers from "./views/Computers";
 import Headphones from "./views/Headphones";
 import Televisions from "./views/Televisions";
