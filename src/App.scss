@@ -1,0 +1,80 @@
+$headerColor: #bada55;
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.navi {
+  background-color: $headerColor;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background: darken($bg, 8%);
+  }
+  &:active {
+    background: darken($bg, 25%);
+  }
+}
+.btn {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: "Poiret One", cursive;
+  font-size: 2em;
+}
+
+.btn-green {
+  @include button-bg(#2ec7cc);
+}
+
+.btn-blue {
+  @include button-bg(#3498db);
+}
+
+.btn-yellow {
+  @include button-bg(#f1c40f);
+}
+
+.btn-red {
+  @include button-bg(#e74c3c);
+}
+
+h1 {
+  font-family: "Poiret One", cursive;
+  font-size: 4em;
+}

@@ -1,9 +1,10 @@
 import React from "react";
+import ElectronicStoreImage from "../img/electronicastore.png";
 
 function Homepage(props) {
   return (
     <div>
-      <h1>Welcome to Electronica Story</h1>
+      <img src={ElectronicStoreImage} alt="Electronic Store" />
     </div>
   );
 }
