@@ -1,10 +1,33 @@
 import React from "react";
-import ElectronicStoreImage from "../img/electronicastore.png";
+import Carousel from "react-bootstrap/Carousel";
+import test1Image from "../img/test1.jpg";
+import test2Image from "../img/test2.png";
+import test3Image from "../img/test3.jpg";
+
 
 function Homepage(props) {
   return (
     <div>
-      <img src={ElectronicStoreImage} alt="Electronic Store" />
+      <Carousel fade>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={test1Image}           
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img 
+          className="d-block w-100" 
+          src={test2Image}            
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={test3Image}
+          />
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 }
