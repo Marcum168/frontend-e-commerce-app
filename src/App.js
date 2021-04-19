@@ -17,11 +17,11 @@ function App() {
       </h1>
 
       <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route path="/SignUp" component={SignUp} />
-        <Route path="/Computers" component={Computers} />
-        <Route path="/Headphones" component={Headphones} />
-        <Route path="/Televisions" component={Televisions} />
+        <Route exact path="/" component={Homepage}><Homepage/></Route> 
+        <Route path="/SignUp" component={SignUp}><SignUp/></Route>
+        <Route path="/Computers" component={Computers} ><Computers/></Route>
+        <Route path="/Headphones" component={Headphones} ><Headphones/></Route>
+        <Route path="/Televisions" component={Televisions}><Televisions/></Route> 
         <Route component={NotFound} />
       </Switch>
     </div>
