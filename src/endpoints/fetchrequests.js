@@ -6,9 +6,9 @@ export const filterRequest = (products) => {
     return fetch(baseURL + "", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        products
-      }),
+      // body: JSON.stringify({
+      //   products
+      // }),
     }).then((res) => res.json());
   };
   export const searchRequest = (products) => {
