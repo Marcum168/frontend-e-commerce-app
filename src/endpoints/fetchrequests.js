@@ -3,6 +3,7 @@ const url =
     ? "fill in once deplyed"
     : "http://localhost:3001/";
 fetch(url + "/login");
+const baseURL = "http://localhost:3000/";
 
 export const filterRequest = (products) => {
   return fetch(url + "", {
