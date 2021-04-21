@@ -1,5 +1,6 @@
 const baseURL = "http://localhost:3000/";
 
+
 export const filterRequest = (products) => {
   return fetch(baseURL + "", {
     method: "GET",
@@ -59,3 +60,22 @@ export const manageBalanceRequest = (balance) => {
     }),
   }).then((res) => res.json());
 };
+export const loginRequest = (username, password) => {
+  
+  
+  return fetch(baseURL + "auth/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username,
+      password,
+    }),
+  }).then((res) => res.json());
+};
+
+export const logoutRequest = (_id) => {
+
+  return fetch(baseURL + "auth/logout", {
+    headers: { Authorization: "Bearer " + _id },
+  }).then((res) => res.json())
+}

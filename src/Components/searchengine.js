@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from "react";
-import ProductItem from "../components/Productitem"
+import ProductItem from "./Productitem"
 
 import { filterRequest } from "../endpoints/fetchrequests";
 import { DISPLAYPRODUCTS, useStore } from "../endpoints/store";
@@ -12,25 +12,8 @@ const products = useStore((state) => state.products);
   
   console.log(products);
 
-  export const loginRequest = (username, password) => {
-  
-  
-    return fetch(baseURL + "auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username,
-        password,
-      }),
-    }).then((res) => res.json());
-  };
 
-  export const logoutRequest = (token) => {
- 
-    return fetch(baseURL + "auth/logout", {
-      headers: { Authorization: "Bearer " + token },
-    }).then((res) => res.json());
-  };
+
   
   useEffect(() => {
     filterRequest(products)
