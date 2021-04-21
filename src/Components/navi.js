@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   Button,
-  Nav,
   Navbar,
   Form,
   FormControl,
@@ -42,8 +41,6 @@ function Navi(props) {
         SignUp
       </Link>
     </Navbar>
-
-
   );
 }
 
