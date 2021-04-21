@@ -24,7 +24,19 @@ export const searchRequest = (products) => {
     }),
   }).then((res) => res.json());
 };
+<<<<<<< HEAD
 
+=======
+export const cartAddRequest = (products) => {
+  return fetch(baseURL + "/products", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      products,
+    }),
+  }).then((res) => res.json());
+};
+>>>>>>> main
 export const cartAddRequest = (cart) => {
   return fetch(url + "cart", {
     method: "POST",

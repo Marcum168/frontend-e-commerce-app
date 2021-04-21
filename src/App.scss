@@ -11,9 +11,9 @@ $headerColor: #bada55;
   align-items: flex-start;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;
@@ -74,4 +74,13 @@ h1 {
 .header {
   display: flex;
   justify-content: center;
+}
+
+.carousel{
+  margin-top:  7vh;
+}
+
+.form-inline{
+  width: 50%;
+  margin-left: 30vh;
 }

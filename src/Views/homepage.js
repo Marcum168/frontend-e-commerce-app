@@ -12,19 +12,22 @@ function Homepage(props) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={test1Image}           
+            src={test1Image} 
+            height="42" width="42"          
           />
         </Carousel.Item>
         <Carousel.Item>
           <img 
           className="d-block w-100" 
-          src={test2Image}            
+          src={test2Image}
+          height="42" width="42"            
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
             src={test3Image}
+            height="42" width="42"
           />
         </Carousel.Item>
       </Carousel>
