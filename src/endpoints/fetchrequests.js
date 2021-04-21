@@ -3,8 +3,7 @@ const url =
     ? "fill in once deplyed"
     : "http://localhost:3001/";
 fetch(url + "/login");
-const baseURL = "http://localhost:3000/";
-
+const BaseURL = "http://localhost:3000/";
 
 export const filterRequest = (products) => {
   return fetch(url + "", {
@@ -24,11 +23,9 @@ export const searchRequest = (products) => {
     }),
   }).then((res) => res.json());
 };
-<<<<<<< HEAD
 
-=======
 export const cartAddRequest = (products) => {
-  return fetch(baseURL + "/products", {
+  return fetch(url + "/products", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -36,7 +33,6 @@ export const cartAddRequest = (products) => {
     }),
   }).then((res) => res.json());
 };
->>>>>>> main
 export const cartAddRequest = (cart) => {
   return fetch(url + "cart", {
     method: "POST",
@@ -48,16 +44,16 @@ export const cartAddRequest = (cart) => {
 };
 
 export const cartAddRequest = (products) => {
-  return fetch(baseURL + "/products", {
+  return fetch(url + "/products", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       products,
-    })
-}).then((res) => res.json());
-}
+    }),
+  }).then((res) => res.json());
+};
 export const cartDeleteRequest = (cart) => {
-  return fetch(baseURL + "cart", {
+  return fetch(url + "cart", {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -67,7 +63,7 @@ export const cartDeleteRequest = (cart) => {
 };
 
 export const purchaseRequest = (cart, spent, balance) => {
-  return fetch(baseURL + "/purchase", {
+  return fetch(url + "/purchase", {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -79,7 +75,7 @@ export const purchaseRequest = (cart, spent, balance) => {
 };
 
 export const manageBalanceRequest = (balance) => {
-  return fetch(baseURL + "auth/login", {
+  return fetch(url + "auth/login", {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -88,9 +84,7 @@ export const manageBalanceRequest = (balance) => {
   }).then((res) => res.json());
 };
 export const loginRequest = (username, password) => {
-  
-  
-  return fetch(baseURL + "auth/login", {
+  return fetch(url + "auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -101,8 +95,7 @@ export const loginRequest = (username, password) => {
 };
 
 export const logoutRequest = (_id) => {
-
-  return fetch(baseURL + "auth/logout", {
+  return fetch(url + "auth/logout", {
     headers: { Authorization: "Bearer " + _id },
-  }).then((res) => res.json())
-}
+  }).then((res) => res.json());
+};
