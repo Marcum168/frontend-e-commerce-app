@@ -18,12 +18,12 @@ export const searchRequest = (products) => {
     }),
   }).then((res) => res.json());
 };
-export const cartAddRequest = (cart) => {
-  return fetch(baseURL + "cart", {
+export const cartAddRequest = (products) => {
+  return fetch(baseURL + "/products", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      cart,
+      products,
     }),
   }).then((res) => res.json());
 };
