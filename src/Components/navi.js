@@ -10,7 +10,7 @@ function Navi(props) {
       </Link>
 
       <Dropdown as={ButtonGroup}>
-        <Button variant="success">Products</Button>
+        <Button variant="success" href = "/products">Products</Button>
 
         <Dropdown.Toggle split variant="success" id="dropdown-basic" />
         <Dropdown.Menu>
