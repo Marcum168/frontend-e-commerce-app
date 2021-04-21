@@ -1,17 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Container, Dropdown, ButtonGroup } from "react-bootstrap";
+import {
+  Button,
+  Nav,
+  Navbar,
+  Form,
+  FormControl,
+  Dropdown,
+  ButtonGroup,
+} from "react-bootstrap";
 
 function Navi(props) {
   return (
-    <Container className="navi">
+    <Navbar bg="primary" variant="dark">
       <Link to="/" className="btn btn-green">
         Home
       </Link>
 
       <Dropdown as={ButtonGroup}>
         <Button variant="success">Products</Button>
-
         <Dropdown.Toggle split variant="success" id="dropdown-basic" />
         <Dropdown.Menu>
           <Dropdown.Item>
@@ -27,7 +34,16 @@ function Navi(props) {
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-    </Container>
+      <Form inline>
+        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        <Button variant="outline-light">Search</Button>
+      </Form>
+      <Link to="/signup" className="btn btn-green">
+        SignUp
+      </Link>
+    </Navbar>
+
+
   );
 }
 
