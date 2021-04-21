@@ -1,6 +1,6 @@
   import {React, useState, useEffect} from "react";
 import ProductItem from "../components/Productitem"
-import SearchEngine from "../components/searchengine"
+import SearchEngine from "../components/SearchEngine"
 import { filterRequest } from "../endpoints/fetchrequests";
 import { DISPLAYPRODUCTS, useStore } from "../endpoints/store";
 

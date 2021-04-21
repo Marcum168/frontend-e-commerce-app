@@ -5,6 +5,7 @@ const url =
 fetch(url + "/login");
 const baseURL = "http://localhost:3000/";
 
+
 export const filterRequest = (products) => {
   return fetch(url + "", {
     method: "GET",
@@ -23,6 +24,9 @@ export const searchRequest = (products) => {
     }),
   }).then((res) => res.json());
 };
+<<<<<<< HEAD
+
+=======
 export const cartAddRequest = (products) => {
   return fetch(baseURL + "/products", {
     method: "POST",
@@ -32,6 +36,7 @@ export const cartAddRequest = (products) => {
     }),
   }).then((res) => res.json());
 };
+>>>>>>> main
 export const cartAddRequest = (cart) => {
   return fetch(url + "cart", {
     method: "POST",
@@ -42,6 +47,15 @@ export const cartAddRequest = (cart) => {
   }).then((res) => res.json());
 };
 
+export const cartAddRequest = (products) => {
+  return fetch(baseURL + "/products", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      products,
+    })
+}).then((res) => res.json());
+}
 export const cartDeleteRequest = (cart) => {
   return fetch(baseURL + "cart", {
     method: "PATCH",
@@ -73,9 +87,10 @@ export const manageBalanceRequest = (balance) => {
     }),
   }).then((res) => res.json());
 };
-
 export const loginRequest = (username, password) => {
-  return fetch(url + "auth/login", {
+  
+  
+  return fetch(baseURL + "auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -85,13 +100,9 @@ export const loginRequest = (username, password) => {
   }).then((res) => res.json());
 };
 
-export const createUser = (username, password) => {
-  return fetch(url + "signUp", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      username,
-      password,
-    }),
-  }).then((res) => res.json());
-};
+export const logoutRequest = (_id) => {
+
+  return fetch(baseURL + "auth/logout", {
+    headers: { Authorization: "Bearer " + _id },
+  }).then((res) => res.json())
+}
