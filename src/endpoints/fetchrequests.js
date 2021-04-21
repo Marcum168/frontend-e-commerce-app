@@ -29,6 +29,9 @@ export const cartAddRequest = (products) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       products,
+    }),
+  }).then((res) => res.json());
+};
 export const cartAddRequest = (cart) => {
   return fetch(url + "cart", {
     method: "POST",
