@@ -33,7 +33,7 @@ export const cartAddRequest = (products) => {
     }),
   }).then((res) => res.json());
 };
-export const cartAddRequest = (cart) => {
+export const cartAddRequest1 = (cart) => {
   return fetch(url + "cart", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -43,15 +43,6 @@ export const cartAddRequest = (cart) => {
   }).then((res) => res.json());
 };
 
-export const cartAddRequest = (products) => {
-  return fetch(url + "/products", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      products,
-    }),
-  }).then((res) => res.json());
-};
 export const cartDeleteRequest = (cart) => {
   return fetch(url + "cart", {
     method: "PATCH",
@@ -97,5 +88,16 @@ export const loginRequest = (username, password) => {
 export const logoutRequest = (_id) => {
   return fetch(url + "auth/logout", {
     headers: { Authorization: "Bearer " + _id },
+  }).then((res) => res.json());
+};
+
+export const createUser = (username, password) => {
+  return fetch(url + "signUp", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username,
+      password,
+    }),
   }).then((res) => res.json());
 };
