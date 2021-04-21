@@ -2,7 +2,11 @@ import create from "zustand";
 import { devtools, redux } from "zustand/middleware";
 // import {useReducer} from 'react'
 
+<<<<<<< HEAD
+const initialState = {products: [],  cart: '', balance: 2000, spent: 0 };
+=======
 const initialState = { products: {}, cart: "", balance: 2000, spent: 0 };
+>>>>>>> main
 
 export const ADDTOCART = "ADDTOCART";
 export const PURCHASE = "PURCHASE";
@@ -19,7 +23,11 @@ const reducer = (state, action) => {
     case ADDTOCART:
       return { cart: action.payload };
     case PURCHASE:
+<<<<<<< HEAD
+        return ;
+=======
       return {};
+>>>>>>> main
     case SEARCHITEM:
       return { products: action.payload };
     case FILTERITEM:

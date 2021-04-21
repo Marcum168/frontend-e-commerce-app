@@ -1,14 +1,12 @@
-  import {React, useState, useEffect} from "react";
+
+import { React, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ProductItem from "../components/Productitem"
 import SearchEngine from "../components/searchengine"
 import { filterRequest } from "../endpoints/fetchrequests";
 import { DISPLAYPRODUCTS, useStore } from "../endpoints/store";
 
-function Headphones(props) {
-  
-
-
-
+function ProductList(props) {
   const [productList, setProductList] = useState([]);
   const products = useStore((state) => state.products);
   const dispatch = useStore((state) => state.dispatch);
@@ -26,26 +24,20 @@ function Headphones(props) {
 
   console.log(products)
 
-  
-
-
-
-
-
-  return(
+  return ( 
+    <><SearchEngine/>
     <>
-    <SearchEngine/>
-     <div>List of Headphones</div>
-    {products.filter((product)=> product.category === "Headphones").map((product)=> {
+   
+    <>{products.map((product)=> {
       return(<ProductItem  product = {product} />)
       
    
     } 
+  )
+}</></></>
   
-      
-  )}</> )
-   
-  //return .filter of product in Headphones deparment
-  
+    
+)
 }
-export default Headphones;
+
+export default ProductList;

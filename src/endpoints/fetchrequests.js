@@ -23,6 +23,12 @@ export const searchRequest = (products) => {
     }),
   }).then((res) => res.json());
 };
+export const cartAddRequest = (products) => {
+  return fetch(baseURL + "/products", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      products,
 export const cartAddRequest = (cart) => {
   return fetch(url + "cart", {
     method: "POST",
@@ -34,7 +40,7 @@ export const cartAddRequest = (cart) => {
 };
 
 export const cartDeleteRequest = (cart) => {
-  return fetch(url + "cart", {
+  return fetch(baseURL + "cart", {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -44,7 +50,7 @@ export const cartDeleteRequest = (cart) => {
 };
 
 export const purchaseRequest = (cart, spent, balance) => {
-  return fetch(url + "/purchase", {
+  return fetch(baseURL + "/purchase", {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -56,7 +62,7 @@ export const purchaseRequest = (cart, spent, balance) => {
 };
 
 export const manageBalanceRequest = (balance) => {
-  return fetch(url + "auth/login", {
+  return fetch(baseURL + "auth/login", {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
