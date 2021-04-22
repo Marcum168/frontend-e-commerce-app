@@ -12,24 +12,24 @@ function Homepage(props) {
           <img
             className="d-block w-100"
             src={test1Image}
-            height="200"
-            width="200"
+            height="300px"
+            width="300px"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
             src={test2Image}
-            height="200"
-            width="200"
+            height="300px"
+            width="300px"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
             src={test3Image}
-            height="200"
-            width="200"
+            height="300px"
+            width="300px"
           />
         </Carousel.Item>
       </Carousel>
