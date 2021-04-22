@@ -21,7 +21,6 @@ function Navi(props) {
           Products
         </Button>
 
-        <Button variant="success">Products</Button>
         <Dropdown.Toggle split variant="success" id="dropdown-basic" />
         <Dropdown.Menu>
           <Dropdown.Item>

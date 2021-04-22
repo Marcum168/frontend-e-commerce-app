@@ -14,7 +14,6 @@ $headerColor: #bada55;
   color: white;
 }
 
-
 .App-link {
   color: #61dafb;
 }
@@ -76,11 +75,15 @@ h1 {
   justify-content: center;
 }
 
-.carousel{
-  margin-top:  7vh;
+.carousel {
+  margin-top: 7vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-.form-inline{
+.form-inline {
   width: 50%;
   margin-left: 30vh;
 }
