@@ -2,11 +2,7 @@ import create from "zustand";
 import { devtools, redux } from "zustand/middleware";
 // import {useReducer} from 'react'
 
-<<<<<<< HEAD
 const initialState = {products: [],  cart: '', balance: 2000, spent: 0 };
-=======
-const initialState = { products: {}, cart: "", balance: 2000, spent: 0 };
->>>>>>> main
 
 export const ADDTOCART = "ADDTOCART";
 export const PURCHASE = "PURCHASE";
@@ -17,17 +13,14 @@ export const DELETEFROMCART = "DELETEFROMCART";
 export const MANAGEBALANCE = "MANAGEBALANCE";
 export const LOGIN = "LOGIN";
 export const CREATEUSER = "CREATEUSER";
+export const GETCART = "GETCART"
 
 const reducer = (state, action) => {
   switch (action.type) {
     case ADDTOCART:
       return { cart: action.payload };
     case PURCHASE:
-<<<<<<< HEAD
-        return ;
-=======
       return {};
->>>>>>> main
     case SEARCHITEM:
       return { products: action.payload };
     case FILTERITEM:
@@ -44,6 +37,8 @@ const reducer = (state, action) => {
       return { user: action.payload };
     case CREATEUSER:
       return { user: action.payload };
+    case GETCART:
+      return { cart: action.payload };
   }
 };
 export const useStore = create(devtools(redux(reducer, initialState)));

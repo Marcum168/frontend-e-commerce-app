@@ -1,22 +1,16 @@
-const url =
-  process.env.NODE_ENV === "production"
-    ? "fill in once deplyed"
-    : "http://localhost:3001/";
-fetch(url + "/login");
+// const baseURL =
+//   process.env.NODE_ENV === "production"
+//     ? "fill in once deplyed"
+//     : "http://localhost:3001/";
+// fetch(baseURL + "/login");
 const baseURL = "http://localhost:3000/";
 
 
 export const filterRequest = (products) => {
-  return fetch(url + "", {
-    method: "GET",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      products,
-    }),
-  }).then((res) => res.json());
+  return fetch(baseURL + "",).then((res) => res.json());
 };
 export const searchRequest = (products) => {
-  return fetch(url + ":id", {
+  return fetch(baseURL + ":id", {
     method: "GET",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -26,7 +20,7 @@ export const searchRequest = (products) => {
 };
 
 export const cartAddRequest = (cart) => {
-  return fetch(url + "cart", {
+  return fetch(baseURL + "cart", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -34,16 +28,18 @@ export const cartAddRequest = (cart) => {
     }),
   }).then((res) => res.json());
 };
-
-export const cartAddRequest = (products) => {
-  return fetch(baseURL + "/products", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      products,
-    })
-}).then((res) => res.json());
+export const cartGetRequest = (cart) => {
+  return fetch(baseURL + "/cart",).then((res) => res.json());
 }
+// export const cartAddRequest = (products) => {
+//   return fetch(basebaseURL + "/products", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({
+//       products,
+//     })
+// }).then((res) => res.json());
+// }
 export const cartDeleteRequest = (cart) => {
   return fetch(baseURL + "cart", {
     method: "PATCH",
@@ -94,3 +90,12 @@ export const logoutRequest = (_id) => {
     headers: { Authorization: "Bearer " + _id },
   }).then((res) => res.json())
 }
+export const createUser = (user) => {
+  return fetch(baseURL + "", {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      user,
+    }),
+  }).then((res) => res.json());
+};

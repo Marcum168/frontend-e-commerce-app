@@ -8,6 +8,7 @@ import Televisions from "./views/Televisions";
 import SignUp from "./views/SignUp";
 import NotFound from "./views/NotFound";
 import ProductList from "./views/ProductList"
+import Cart from "./components/Cart"
 import { Container } from "react-bootstrap";
 function App() {
   fetch('http://localhost:3000').then((res) => (res.json)).then((products) => console.log(products))
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Computers" component={Computers} ><Computers/></Route>
         <Route path="/Headphones" component={Headphones} ><Headphones/></Route>
         <Route path="/Televisions" component={Televisions}><Televisions/></Route> 
+         <Route path = "/cart" component = {Cart}></Route> 
         <Route component={NotFound} />
       </Switch>
     </div>

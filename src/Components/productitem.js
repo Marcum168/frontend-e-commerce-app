@@ -13,11 +13,12 @@ function ProductItem(props) {
 //   console.log(dispatch);
 const CartAddition = (e) => {
         e.preventDefault()
-                cartAddRequest(props.product)
-              .then((product) => {
-                dispatch({ type: ADDTOCART, payload: product});
-              })
-              console.log(cart)  
+         cartAddRequest(props.product)
+          .then((product) => {
+            dispatch({ type: ADDTOCART, payload: product});
+          })
+          console.log(cart)
+                 
           }
        
 
@@ -27,12 +28,7 @@ const CartAddition = (e) => {
 
   //   return(<div>{productList}</div>)
 
-  console.log(props.product.name);
-  console.log(props.product.price);
-  console.log(props.product.category);
-  console.log(props.product.description);
-      
-  console.log("What's going on?")
+
 return(<>
 <div>{props.product.name}</div>
 <div>Price: ${props.product.price}</div>
