@@ -1,11 +1,11 @@
-//NOTE: even though my job is the backend, I can only do so much without access to the frontend
-//as one of my jobs is to add things to the cart, so I think I should go ahead and create it
+import React, { useState } from "react";
+import { cartAddRequest } from "../endpoints/fetchrequests";
+import { Form, Button } from "react-bootstrap";
 
-
-function Cart(props){
-
-
-    return(
-        <></>
-    )
+function Cart(props) {
+  <div></div>;
 }
+
+return <></>;
+
+export default Cart;

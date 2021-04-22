@@ -36,10 +36,12 @@ function Navi(props) {
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-      <Form inline>
+
+      <Form className="searchBar">
         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
         <Button variant="outline-light">Search</Button>
       </Form>
+
       <Link to="/signup" className="btn btn-green">
         SignUp
       </Link>
