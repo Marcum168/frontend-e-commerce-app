@@ -20,6 +20,7 @@ const CartAddition = (e) => {
           console.log(cart)
                  
           }
+
        
 
   

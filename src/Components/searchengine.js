@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from "react";
-import ProductItem from "./Productitem"
+import ProductItem from "./ProductItem"
 
 import { filterRequest } from "../endpoints/fetchrequests";
 import { DISPLAYPRODUCTS, useStore } from "../endpoints/store";
