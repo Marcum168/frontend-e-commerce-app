@@ -20,7 +20,7 @@ const reducer = (state, action) => {
     case ADDTOCART:
       return { cart: action.payload };
     case PURCHASE:
-      return {};
+      return {cart: action.payload};
     case SEARCHITEM:
       return { products: action.payload };
     case FILTERITEM:

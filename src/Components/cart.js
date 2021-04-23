@@ -2,8 +2,8 @@
 //as one of my jobs is to add things to the cart, so I think I should go ahead and create it
 
 import { React, useState, useEffect } from "react";
-import { cartGetRequest, cartDeleteRequest } from "../endpoints/fetchrequests";
-import { GETCART, useStore, DELETEFROMCART} from "../endpoints/store";
+import { cartGetRequest, purchaseRequest, cartDeleteRequest } from "../endpoints/fetchrequests";
+import { GETCART, PURCHASE, useStore, DELETEFROMCART} from "../endpoints/store";
 function Cart(props){
     const cart = useStore((state) => state.cart);
     const dispatch = useStore((state) => state.dispatch);
@@ -34,6 +34,16 @@ console.log(cart);
     //   console.log(cart)
              
     // }
+    // const CheckOut = () => {
+     
+    //    purchaseRequest(cart)
+    //       .then((cart) => {
+    //         dispatch({ type: PURCHASE, payload: cart});
+    //       })
+    //       console.log(cart)
+   
+
+    // }
     
 
 //     if(cart.length === 0){
@@ -45,8 +55,9 @@ console.log(cart);
     <div>price: ${item.cart.price}</div>
     <div>category: {item.cart.category}</div>
     <div> description: {item.cart.description}</div>
-    {/* <button onClick = {deleteItem(item)}> Delete</button> */}
+    
     </> )})  }</>)
+    
     
 }
 
