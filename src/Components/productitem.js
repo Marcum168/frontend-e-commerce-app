@@ -7,7 +7,24 @@ function ProductItem(props) {
   //   const [productList, setProductList] = useState([]);
   const cart = useStore((state) => state.cart);
   const dispatch = useStore((state) => state.dispatch);
+<<<<<<< HEAD
   //   console.log(products);
+=======
+//   console.log(products);
+
+//   console.log(dispatch);
+const CartAddition = (e) => {
+        e.preventDefault()
+         cartAddRequest(props.product)
+          .then((product) => {
+            dispatch({ type: ADDTOCART, payload: product});
+          })
+          console.log(cart)
+                 
+          }
+
+       
+>>>>>>> STORE_REQUESTS
 
   //   console.log(dispatch);
   const CartAddition = (e) => {
@@ -22,6 +39,7 @@ function ProductItem(props) {
 
   //   return(<div>{productList}</div>)
 
+<<<<<<< HEAD
   console.log(props.product.name);
   console.log(props.product.price);
   console.log(props.product.category);
@@ -37,6 +55,19 @@ function ProductItem(props) {
       <button onClick={CartAddition}>Add To Cart</button>
     </>
   );
+=======
+
+return(<>
+<div>{props.product.name}</div>
+<div>Price: ${props.product.price}</div>
+<div>Category: {props.product.category}</div>
+<div>Description: {props.product.description}</div>
+<button onClick = {CartAddition}>Add To Cart</button>
+</>)
+      
+    
+  
+>>>>>>> STORE_REQUESTS
 }
 
 export default ProductItem;

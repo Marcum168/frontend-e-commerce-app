@@ -1,7 +1,12 @@
 import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import ProductItem from "../components/ProductItem";
 import SearchEngine from "../components/SearchEngine";
+=======
+import ProductItem from "../components/ProductItem"
+import SearchEngine from "../components/SearchEngine"
+>>>>>>> STORE_REQUESTS
 import { filterRequest } from "../endpoints/fetchrequests";
 import { DISPLAYPRODUCTS, useStore } from "../endpoints/store";
 

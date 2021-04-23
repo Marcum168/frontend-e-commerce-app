@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { React, useState, useEffect } from "react";
 import ProductItem from "../components/ProductItem";
 import SearchEngine from "../components/SearchEngine";
+=======
+  import {React, useState, useEffect} from "react";
+import ProductItem from "../components/ProductItem"
+import SearchEngine from "../components/SearchEngine"
+>>>>>>> STORE_REQUESTS
 import { filterRequest } from "../endpoints/fetchrequests";
 import { DISPLAYPRODUCTS, useStore } from "../endpoints/store";
 

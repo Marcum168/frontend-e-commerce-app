@@ -7,8 +7,9 @@ import Headphones from "./views/Headphones";
 import Televisions from "./views/Televisions";
 import SignUp from "./views/SignUp";
 import NotFound from "./views/NotFound";
-import ProductList from "./views/ProductList";
-
+import ProductList from "./views/ProductList"
+import Cart from "./components/Cart"
+import { Container } from "react-bootstrap";
 function App() {
   fetch("http://localhost:3000")
     .then((res) => res.json)
@@ -27,6 +28,8 @@ function App() {
         <Route path="/SignUp" component={SignUp}>
           <SignUp />
         </Route>
+        <Route path = "/cart" component = {Cart}></Route>
+        <Route path = '/products' component = {ProductList}></Route>
         <Route path="/Computers" component={Computers}>
           <Computers />
         </Route>

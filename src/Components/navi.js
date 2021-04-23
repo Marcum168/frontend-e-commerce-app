@@ -15,7 +15,7 @@ function Navi(props) {
       <Link to="/" className="btn btn-green">
         Home
       </Link>
-
+      <Link to="/cart">Cart</Link>
       <Dropdown as={ButtonGroup}>
         <Button variant="success" href="/products">
           Products
@@ -37,7 +37,7 @@ function Navi(props) {
         </Dropdown.Menu>
       </Dropdown>
 
-      <Form className="searchBar">
+      <Form inline>
         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
         <Button variant="outline-light">Search</Button>
       </Form>

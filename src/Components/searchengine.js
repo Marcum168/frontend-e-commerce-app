@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { React, useState, useEffect } from "react";
 import ProductItem from "./ProductItem";
+=======
+import {React, useState, useEffect} from "react";
+import ProductItem from "./ProductItem"
+>>>>>>> STORE_REQUESTS
 
 import { filterRequest } from "../endpoints/fetchrequests";
 import { DISPLAYPRODUCTS, useStore } from "../endpoints/store";
