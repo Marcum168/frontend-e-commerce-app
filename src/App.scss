@@ -79,7 +79,7 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 90%;
 }
 
 .form-inline {
@@ -92,4 +92,47 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.featured {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 25%;
+}
+
+.accessories {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 7vh;
+}
+
+.cardOne {
+  margin-right: 7vh;
+}
+
+.cardTwo {
+  margin-left: 7vh;
+}
+
+.tvImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 50%;
+}
+
+.headphoneImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 50%;
+}
+
+.bottomHeader {
+  background-color: rgb(0, 123, 255);
+  border: 1px solid gray;
 }

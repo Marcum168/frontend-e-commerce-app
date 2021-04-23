@@ -1,9 +1,9 @@
 const url =
   process.env.NODE_ENV === "production"
     ? "fill in once deplyed"
-    : "http://localhost:3001/";
+    : "http://localhost:3000/";
 fetch(url + "/login");
-const BaseURL = "http://localhost:3000/";
+const baseURL = "http://localhost:3000/";
 
 export const filterRequest = (products) => {
   return fetch(url + "", {
@@ -92,7 +92,7 @@ export const logoutRequest = (_id) => {
 };
 
 export const createUser = (username, password) => {
-  return fetch(url + "signUp", {
+  return fetch(baseURL + "signUp", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
