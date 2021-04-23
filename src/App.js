@@ -11,7 +11,9 @@ import ProductList from "./views/ProductList"
 import Cart from "./components/Cart"
 import { Container } from "react-bootstrap";
 function App() {
-  fetch('http://localhost:3000').then((res) => (res.json)).then((products) => console.log(products))
+  fetch("http://localhost:3000")
+    .then((res) => res.json)
+    .then((products) => console.log(products));
   return (
     <div className="App">
       <h1>
@@ -20,13 +22,23 @@ function App() {
       </h1>
 
       <Switch>
-        <Route exact path="/" component={Homepage}><Homepage/></Route> 
-        <Route path="/SignUp" component={SignUp}><SignUp/></Route>
-        <Route path = "/products" component = {ProductList}></Route>
-        <Route path="/Computers" component={Computers} ><Computers/></Route>
-        <Route path="/Headphones" component={Headphones} ><Headphones/></Route>
-        <Route path="/Televisions" component={Televisions}><Televisions/></Route> 
-         <Route path = "/cart" component = {Cart}></Route> 
+        <Route exact path="/" component={Homepage}>
+          <Homepage />
+        </Route>
+        <Route path="/SignUp" component={SignUp}>
+          <SignUp />
+        </Route>
+        <Route path = "/cart" component = {Cart}></Route>
+        <Route path = '/products' component = {ProductList}></Route>
+        <Route path="/Computers" component={Computers}>
+          <Computers />
+        </Route>
+        <Route path="/Headphones" component={Headphones}>
+          <Headphones />
+        </Route>
+        <Route path="/Televisions" component={Televisions}>
+          <Televisions />
+        </Route>
         <Route component={NotFound} />
       </Switch>
     </div>

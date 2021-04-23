@@ -18,7 +18,6 @@ export const searchRequest = (products) => {
     }),
   }).then((res) => res.json());
 };
-
 export const cartAddRequest = (cart) => {
   return fetch(baseURL + "cart", {
     method: "POST",
@@ -29,7 +28,7 @@ export const cartAddRequest = (cart) => {
   }).then((res) => res.json());
 };
 export const cartGetRequest = (cart) => {
-  return fetch(baseURL + "/cart",).then((res) => res.json());
+  return fetch(baseURL + "cart",).then((res) => res.json());
 }
 // export const cartAddRequest = (products) => {
 //   return fetch(basebaseURL + "/products", {
@@ -42,12 +41,12 @@ export const cartGetRequest = (cart) => {
 // }
 export const cartDeleteRequest = (cart) => {
   return fetch(baseURL + "cart", {
-    method: "PATCH",
+    method: "DELETE",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       cart,
     }),
-  }).then((res) => res.json());
+  }).then((res) => res.json()).then((cart)=> console.log(cart));
 };
 
 export const purchaseRequest = (cart, spent, balance) => {
