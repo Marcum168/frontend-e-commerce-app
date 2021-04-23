@@ -3,7 +3,7 @@ import { LOGIN, useStore } from "../endpoints/store";
 import { loginRequest } from "../endpoints/fetchrequests";
 import CreateUser from "./CreateUser.js";
 import { Form, Button } from "react-bootstrap";
-
+import { useHistory } from "react-router-dom";
 function Login(props) {
   const dispatch = useStore((state) => state.dispatch);
   const [errors, setErrors] = useState("");
@@ -11,12 +11,14 @@ function Login(props) {
     username: "",
     password: "",
   });
-
+  const history = useHistory();
   const handleLogin = (e) => {
     e.preventDefault();
     loginRequest(formData.username, formData.password).then((userData) => {
-      if (userData.statusCode === 200) {
-        return dispatch({ type: LOGIN, payload: userData });
+      console.log(userData);
+      if (userData[0].username) {
+        dispatch({ type: LOGIN, payload: userData });
+        history.push("/");
       } else {
         setErrors(
           <div className="error">{userData.message}, please try again.</div>
